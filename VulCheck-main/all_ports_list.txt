@@ -1,0 +1,133 @@
+======================================================================
+COMPREHENSIVE NETWORKING PORTS MASTER LIST
+======================================================================
+
+1. WELL-KNOWN PORTS (0 - 1023)
+----------------------------------------------------------------------
+Port     Protocol    Description
+----------------------------------------------------------------------
+0        Reserved    Reserved port
+1        TCP/UDP     TCP Port Service Multiplexer (TCPMUX)
+5        TCP/UDP     Remote Job Entry (RJE)
+7        TCP/UDP     Echo protocol
+9        TCP/UDP     Discard protocol
+11       TCP/UDP     Active Users (Systat)
+13       TCP/UDP     Daytime protocol
+17       TCP/UDP     Quote of the Day (QOTD)
+19       TCP/UDP     Character Generator (CharGen)
+20       TCP         FTP - Data Transfer
+21       TCP         FTP - Control (Command)
+22       TCP/UDP     SSH (Secure Shell) / SFTP
+23       TCP/UDP     Telnet (Unencrypted text communications)
+25       TCP         SMTP (Simple Mail Transfer Protocol - routing email)
+37       TCP/UDP     Time protocol
+43       TCP         Whois protocol
+49       TCP/UDP     TACACS+ authentication
+53       TCP/UDP     DNS (Domain Name System)
+67       UDP         DHCP Server (Bootstrap Protocol Server)
+68       UDP         DHCP Client (Bootstrap Protocol Client)
+69       UDP         TFTP (Trivial File Transfer Protocol)
+70       TCP         Gopher protocol
+79       TCP         Finger protocol
+80       TCP         HTTP (Hypertext Transfer Protocol - Web)
+88       TCP/UDP     Kerberos authentication
+109      TCP         POP2 (Post Office Protocol version 2)
+110      TCP         POP3 (Post Office Protocol version 3)
+111      TCP/UDP     RPCBIND / Portmapper
+113      TCP         Ident Authentication Service
+115      TCP         SFTP (Simple File Transfer Protocol)
+118      TCP/UDP     SQL Services
+119      TCP         NNTP (Network News Transfer Protocol)
+123      UDP         NTP (Network Time Protocol)
+135      TCP/UDP     Microsoft RPC Endpoint Mapper
+137      UDP         NetBIOS Name Service
+138      UDP         NetBIOS Datagram Service
+139      TCP         NetBIOS Session Service
+143      TCP         IMAP (Internet Message Access Protocol)
+156      TCP/UDP     SQL Server Service
+161      UDP         SNMP (Simple Network Management Protocol)
+162      TCP/UDP     SNMP Trap
+179      TCP         BGP (Border Gateway Protocol)
+194      TCP/UDP     IRC (Internet Relay Chat)
+201      TCP/UDP     AppleTalk Routing Maintenance
+220      TCP/UDP     IMAP3
+389      TCP/UDP     LDAP (Lightweight Directory Access Protocol)
+443      TCP         HTTPS (HTTP Secure - Encrypted Web)
+444      TCP/UDP     SNPP (Simple Network Paging Protocol)
+445      TCP         SMB (Server Message Block over TCP)
+464      TCP/UDP     Kerberos Change/Set password
+465      TCP         SMTPS (SMTP over TLS/SSL)
+500      UDP         ISAKMP / IKE (IPsec VPN Key Exchange)
+514      UDP         Syslog (System Logging)
+515      TCP         LPD (Line Printer Daemon)
+520      UDP         RIP (Routing Information Protocol)
+530      TCP/UDP     RPC over HTTPS
+543      TCP         Kerberos login
+544      TCP         Kerberos remote shell
+546      TCP/UDP     DHCPv6 Client
+547      TCP/UDP     DHCPv6 Server
+548      TCP         AFP (Apple Filing Protocol)
+554      TCP/UDP     RTSP (Real Time Streaming Protocol)
+563      TCP/UDP     NNTPS (NNTP over TLS/SSL)
+587      TCP         SMTP (Modern email submission with STARTTLS)
+631      TCP/UDP     CUPS (Internet Printing Protocol)
+636      TCP         LDAPS (LDAP over TLS/SSL)
+873      TCP         Rsync file synchronization
+989      TCP/UDP     FTPS Data (FTP Secure over TLS/SSL)
+990      TCP/UDP     FTPS Control (FTP Secure over TLS/SSL)
+992      TCP/UDP     Telnet Secure
+993      TCP         IMAPS (IMAP over TLS/SSL)
+995      TCP         POP3S (POP3 over TLS/SSL)
+
+2. REGISTERED PORTS (1024 - 49151)
+----------------------------------------------------------------------
+Port     Protocol    Description
+----------------------------------------------------------------------
+1080     TCP         SOCKS Proxy
+1194     UDP/TCP     OpenVPN
+1234     TCP/UDP     VLC Media Player default streaming
+1433     TCP         Microsoft SQL Server Database
+1434     UDP         Microsoft SQL Server Monitor
+1521     TCP         Oracle Database default
+1701     UDP         L2TP (Layer 2 Tunneling Protocol)
+1723     TCP         PPTP (Point-to-Point Tunneling Protocol)
+1812     UDP         RADIUS Authentication
+1813     UDP         RADIUS Accounting
+1900     UDP         SSDP (Universal Plug and Play)
+2049     TCP         NFS (Network File System)
+2181     TCP         Apache ZooKeeper
+2375     TCP         Docker Plaintext Port
+2376     TCP         Docker TLS Port
+3000     TCP         Node.js / React / Grafana defaults
+3306     TCP         MySQL Database
+3389     TCP         RDP (Remote Desktop Protocol)
+3690     TCP/UDP     Subversion (SVN)
+4500     UDP         IPsec NAT Traversal
+4840     TCP/UDP     OPC UA (Industrial automation)
+5000     TCP         Flask / Docker Registry / UPnP
+5060     TCP/UDP     SIP (Session Initiation Protocol for VoIP)
+5061     TCP         SIPS (SIP Secure over TLS)
+5222     TCP         XMPP Jabber client connection
+5432     TCP         PostgreSQL Database
+5672     TCP/UDP     RabbitMQ
+5900     TCP         VNC Remote Desktop
+6379     TCP         Redis Key-Value Store
+8000     TCP         Common alternative HTTP development port
+8080     TCP         HTTP Alternate (Apache Tomcat, etc.)
+8443     TCP         HTTPS Alternate
+8888     TCP         Jupyter Notebook default
+9000     TCP         SonarQube / PHP-FPM
+9092     TCP         Apache Kafka
+9200     TCP         Elasticsearch HTTP interface
+9300     TCP         Elasticsearch Java transport
+11211    TCP/UDP     Memcached
+25565    TCP/UDP     Minecraft Server
+27017    TCP         MongoDB default
+
+3. DYNAMIC / EPHEMERAL PORTS (49152 - 65535)
+----------------------------------------------------------------------
+Range: 49152 to 65535
+Description: Private, Dynamic, or Ephemeral Ports.
+These ports cannot be officially registered or assigned to services.
+Operating systems allocate ports from this range automatically to
+serve as temporary source ports for outbound communication.

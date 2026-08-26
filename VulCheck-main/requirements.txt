@@ -1,0 +1,4 @@
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+python-nmap>=0.7.1,<1
+pytest>=8,<9

@@ -1,3 +1,0 @@
-# Add one authorized target per line.
-# Example:
-# 192.168.64.129

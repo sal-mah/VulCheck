@@ -14,7 +14,7 @@ run_xss_scan(target, recon_data=None)
 
 ## Finding fields
 
-The XSS module returns the common VulnScope finding fields:
+The XSS module returns the common Vulneraptor finding fields:
 
 - module
 - type

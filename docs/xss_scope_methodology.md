@@ -1,4 +1,4 @@
-# VulnScope Lite — XSS Scanner
+# Vulneraptor Lite — XSS Scanner
 
 ## Scope
 
@@ -22,7 +22,7 @@ If no applicable web service is available, the module returns `status="skipped"`
 2. Request the target page.
 3. Discover query-string parameters.
 4. Discover HTML forms and their named fields.
-5. Submit a controlled marker (`VulnScopeXSS`) to one input at a time.
+5. Submit a controlled marker (`VulneraptorXSS`) to one input at a time.
 6. Check whether the exact marker is reflected in the response body.
 7. Return standardized evidence, severity, confidence and remediation fields.
 

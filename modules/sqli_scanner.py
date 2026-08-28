@@ -1,7 +1,7 @@
 """
 modules/sqli_scanner.py
 
-SQL Injection Scanner for VulnScope Lite.
+SQL Injection Scanner for Vulneraptor Lite.
 
 Team interface:
     run_sqli_scanner(target, recon_data=None) -> dict
@@ -67,7 +67,7 @@ MAX_PARAMETERS_PER_URL = 30
 # Maximum response body considered for comparison.
 MAX_COMPARE_SIZE = 500_000
 
-USER_AGENT = "VulnScope-Lite-SQLi-Scanner/1.0"
+USER_AGENT = "Vulneraptor-Lite-SQLi-Scanner/1.0"
 
 
 # ============================================================

@@ -1,7 +1,7 @@
 """
 modules/xss_scanner.py
 
-VulnScope Lite - XSS Scanner
+Vulneraptor Lite - XSS Scanner
 
 AUTHORIZED SECURITY TESTING ONLY.
 
@@ -21,7 +21,7 @@ Supported:
     - Form discovery
     - Stored-XSS verification
     - Confidence scoring
-    - Structured VulnScope result schema
+    - Structured Vulneraptor result schema
 
 Standard entry point:
 
@@ -76,7 +76,7 @@ DEFAULT_MAX_FIELDS = 30
 
 DEFAULT_MAX_STORED_TESTS = 20
 
-USER_AGENT = "VulnScope-Lite-XSS-Scanner/2.0"
+USER_AGENT = "Vulneraptor-Lite-XSS-Scanner/2.0"
 
 
 # ============================================================
@@ -92,28 +92,28 @@ USER_AGENT = "VulnScope-Lite-XSS-Scanner/2.0"
 PROBES = [
     {
         "name": "html_probe",
-        "payload": "<VulnScopeXSS>",
-        "marker": "VulnScopeXSS",
+        "payload": "<VulneraptorXSS>",
+        "marker": "VulneraptorXSS",
     },
     {
         "name": "quote_probe",
-        "payload": '"VulnScopeXSS"',
-        "marker": "VulnScopeXSS",
+        "payload": '"VulneraptorXSS"',
+        "marker": "VulneraptorXSS",
     },
     {
         "name": "attribute_probe",
-        "payload": "'VulnScopeXSS'",
-        "marker": "VulnScopeXSS",
+        "payload": "'VulneraptorXSS'",
+        "marker": "VulneraptorXSS",
     },
     {
         "name": "tag_probe",
-        "payload": "<b>VulnScopeXSS</b>",
-        "marker": "VulnScopeXSS",
+        "payload": "<b>VulneraptorXSS</b>",
+        "marker": "VulneraptorXSS",
     },
     {
         "name": "svg_probe",
-        "payload": "<svg data-vulnscope='VulnScopeXSS'>",
-        "marker": "VulnScopeXSS",
+        "payload": "<svg data-Vulneraptor='VulneraptorXSS'>",
+        "marker": "VulneraptorXSS",
     },
 ]
 
@@ -121,11 +121,11 @@ PROBES = [
 # Simple harmless markers used to determine whether encoding occurred.
 
 HTML_ENCODED_MARKERS = [
-    "&lt;VulnScopeXSS&gt;",
-    "&quot;VulnScopeXSS&quot;",
-    "&#34;VulnScopeXSS&#34;",
-    "&#x22;VulnScopeXSS&#x22;",
-    "&#x3c;VulnScopeXSS&#x3e;",
+    "&lt;VulneraptorXSS&gt;",
+    "&quot;VulneraptorXSS&quot;",
+    "&#34;VulneraptorXSS&#34;",
+    "&#x22;VulneraptorXSS&#x22;",
+    "&#x3c;VulneraptorXSS&#x3e;",
 ]
 
 
@@ -882,7 +882,7 @@ def _test_form_field(
 
     for name in form.fields:
 
-        data[name] = "VulnScopeTest"
+        data[name] = "VulneraptorTest"
 
 
     data[field] = probe["payload"]
@@ -1004,15 +1004,15 @@ def _test_stored_form(
     """
 
     unique_marker = (
-        f"VulnScopeStoredXSS_"
+        f"VulneraptorStoredXSS_"
         f"{uuid.uuid4().hex[:12]}"
     )
 
 
     payload = (
-        f"<VulnScopeStoredXSS "
+        f"<VulneraptorStoredXSS "
         f"data-marker='{unique_marker}'>"
-        f"</VulnScopeStoredXSS>"
+        f"</VulneraptorStoredXSS>"
     )
 
 
@@ -1020,7 +1020,7 @@ def _test_stored_form(
 
     for name in form.fields:
 
-        data[name] = "VulnScopeStoredTest"
+        data[name] = "VulneraptorStoredTest"
 
 
     data[field] = payload
@@ -1171,7 +1171,7 @@ def scan_url(
     *,
     session: Optional[requests.Session] = None,
     timeout: int = DEFAULT_TIMEOUT,
-    marker: str = "VulnScopeXSS",
+    marker: str = "VulneraptorXSS",
     test_stored: bool = True,
 ) -> Dict[str, Any]:
 
@@ -1522,7 +1522,7 @@ def _extract_recon_urls(
 
 
 # ============================================================
-# MAIN VULNSCOPE ENTRY POINT
+# MAIN Vulneraptor ENTRY POINT
 # ============================================================
 
 def run_xss_scan(
@@ -1536,7 +1536,7 @@ def run_xss_scan(
 ) -> Dict[str, Any]:
 
     """
-    Standard VulnScope XSS scanner entry point.
+    Standard Vulneraptor XSS scanner entry point.
 
     Example:
 
@@ -1569,7 +1569,7 @@ def run_xss_scan(
             web_targets=[],
             scanned_urls=[],
             scan_details=[],
-            marker="VulnScopeXSS",
+            marker="VulneraptorXSS",
         )
 
 
@@ -1647,7 +1647,7 @@ def run_xss_scan(
             normalized,
             session=session,
             timeout=timeout,
-            marker="VulnScopeXSS",
+            marker="VulneraptorXSS",
             test_stored=True,
         )
 

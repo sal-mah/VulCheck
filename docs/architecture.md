@@ -1,6 +1,6 @@
 # Architecture
 
-VulnScope Lite is organized as a small package-based scanner.
+Vulneraptor Lite is organized as a small package-based scanner.
 
 ```text
 main.py                 CLI entry point

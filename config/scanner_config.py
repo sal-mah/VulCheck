@@ -1,4 +1,4 @@
-TOOL_NAME = "VulnScope Lite"
+TOOL_NAME = "Vulneraptor Lite"
 INTEGRATION_VERSION = "2.1.0"
 INTEGRATION_VERSION = "2.0.0"
 

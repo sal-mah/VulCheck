@@ -29,7 +29,7 @@ def test_batch_report_output_path_uses_target_file_name():
 
 def test_csv_rows_maps_integrated_finding_type():
     report = {
-        "tool": "VulnScope Lite",
+        "tool": "Vulneraptor Lite",
         "integration_version": "2.1.0",
         "target": "https://www.hackerone.com/",
         "scan_started": "start",

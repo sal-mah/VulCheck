@@ -673,7 +673,7 @@ def save_pdf(data: Any, filename: str) -> Path:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "VulnScope Lite integrated "
+            "Vulneraptor Lite integrated "
             "vulnerability scanner"
         )
     )

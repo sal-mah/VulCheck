@@ -1,5 +1,5 @@
 """
-Security rules for VulnScope Lite Security Configuration module.
+Security rules for Vulneraptor Lite Security Configuration module.
 """
 
 SCANNER_DEFAULTS = {

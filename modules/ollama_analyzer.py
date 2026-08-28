@@ -51,7 +51,7 @@ def analyze_results(
     timeout: int = 180,
 ) -> dict[str, Any]:
     """
-    Analyze an already completed VulnScope report.
+    Analyze an already completed Vulneraptor report.
 
     Ollama is deliberately kept outside the scanning logic:
     it receives evidence produced by the deterministic modules and
@@ -59,7 +59,7 @@ def analyze_results(
     """
 
     prompt = f"""
- You are the local AI security analyst for VulnScope Lite.
+ You are the local AI security analyst for Vulneraptor Lite.
  
  Analyze ONLY the security evidence contained in the JSON below.
  
@@ -95,7 +95,7 @@ def analyze_results(
  18. Additional Observations
  19. Additional Findings
  
- VULNSCOPE REPORT:
+ Vulneraptor REPORT:
  {json.dumps(scan_report, indent=2, ensure_ascii=False, default=str)}
 """
 

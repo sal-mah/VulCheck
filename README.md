@@ -1,6 +1,6 @@
-# VulCheck
+# Vulneraptor
 
-VulCheck is an authorized-use web security scanner that runs multiple checks
+Vulneraptor is an authorized-use web security scanner that runs multiple checks
 from one command and writes practical reports for later review.
 
 Only scan systems you own or have explicit permission to test.
@@ -98,8 +98,8 @@ sudo apt install -y git python3 python3-venv python3-pip python3-full nmap
 Clone the project:
 
 ```bash
-git clone https://github.com/sal-mah/VulCheck.git
-cd VulCheck
+git clone https://github.com/sal-mah/Vulneraptor.git
+cd Vulneraptor
 ```
 
 Create and activate a virtual environment:
@@ -130,7 +130,7 @@ python main.py Target --json --csv --pdf
 
 ## Kali Linux Setup With A Debian Package
 
-If you have a built Debian package such as `vulcheck_2.0.0_all.deb`, install
+If you have a built Debian package such as `Vulneraptor_2.0.0_all.deb`, install
 required system packages first:
 
 ```bash
@@ -141,25 +141,25 @@ sudo apt install -y python3 python3-venv python3-full nmap
 Install the package from the directory that contains the `.deb` file:
 
 ```bash
-sudo apt install -y ./vulcheck_2.0.0_all.deb
+sudo apt install -y ./Vulneraptor_2.0.0_all.deb
 ```
 
-The package installs VulCheck under `/opt/VulCheck` and creates the `vulcheck`
+The package installs Vulneraptor under `/opt/Vulneraptor` and creates the `Vulneraptor`
 command in `/usr/local/bin`.
 
 Check the installed command:
 
 ```bash
-vulcheck --help
+Vulneraptor --help
 ```
 
 Run a scan:
 
 ```bash
-vulcheck Target --json --csv --pdf
+Vulneraptor Target --json --csv --pdf
 ```
 
-To move it to another Kali machine, copy `vulcheck_2.0.0_all.deb` to that
+To move it to another Kali machine, copy `Vulneraptor_2.0.0_all.deb` to that
 machine and repeat the package install commands.
 
 ## Usage
@@ -176,7 +176,7 @@ Save JSON, CSV, and PDF reports:
 python main.py Target --json --csv --pdf
 ```
 
-Legacy filename arguments are accepted, but VulCheck still writes reports using
+Legacy filename arguments are accepted, but Vulneraptor still writes reports using
 the target name inside the `reports` folder:
 
 ```bash
@@ -214,7 +214,7 @@ reports/targets_report.pdf
 
 ## Local Ollama AI Reports
 
-VulCheck can optionally analyze completed scan evidence with a local Ollama
+Vulneraptor can optionally analyze completed scan evidence with a local Ollama
 model. The AI feature does not perform scanning; it only reviews the scanner
 results.
 
@@ -248,7 +248,7 @@ python test_ollama_generate.py
 
 Generated reports are saved in the `reports` directory.
 
-For `https://www.Target.com/`, VulCheck creates:
+For `https://www.Target.com/`, Vulneraptor creates:
 
 ```text
 reports/Target_report.json
@@ -256,7 +256,7 @@ reports/Target_report.csv
 reports/Target_report.pdf
 ```
 
-For IP targets, VulCheck creates safe filenames such as:
+For IP targets, Vulneraptor creates safe filenames such as:
 
 ```text
 reports/192_168_64_129_report.json

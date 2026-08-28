@@ -32,7 +32,7 @@ except ImportError:
     )
 
 
-TOOL_NAME = "VulnScope Lite"
+TOOL_NAME = "Vulneraptor Lite"
 TOOL_VERSION = "2.1.0"
 
 REQUEST_TIMEOUT = SCANNER_DEFAULTS["request_timeout"]
@@ -205,7 +205,7 @@ def make_finding(
     applicability: float = 1.0,
     cookie_type: Optional[str] = None,
 ) -> Dict[str, Any]:
-    """Create the common VulnScope finding schema."""
+    """Create the common Vulneraptor finding schema."""
     finding = {
         "module": "security_config",
         "type": finding_type,
@@ -1455,7 +1455,7 @@ def run_security_config_scan(
     recon_data: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """
-    Standard VulnScope integration entry point.
+    Standard Vulneraptor integration entry point.
 
     Parameters
     ----------
@@ -1856,7 +1856,7 @@ def scan_batch(targets: Iterable[str]) -> List[Dict[str, Any]]:
 
 def build_argument_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="VulnScope Lite Security Configuration Scanner"
+        description="Vulneraptor Lite Security Configuration Scanner"
     )
 
     parser.add_argument(

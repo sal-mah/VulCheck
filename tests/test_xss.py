@@ -13,9 +13,9 @@ class FakeResponse:
 
 class FakeSession:
     def get(self, url, **kwargs):
-        if "q=VulnScopeXSS" in url:
+        if "q=VulneraptorXSS" in url:
             return FakeResponse(
-                "<html><body>VulnScopeXSS</body></html>", url
+                "<html><body>VulneraptorXSS</body></html>", url
             )
         return FakeResponse(
             '<html><form action="/search" method="get">'
@@ -24,7 +24,7 @@ class FakeSession:
 
     def post(self, url, **kwargs):
         return FakeResponse(
-            "<html><body>VulnScopeXSS</body></html>", url
+            "<html><body>VulneraptorXSS</body></html>", url
         )
 
 

@@ -6,7 +6,7 @@ URL = "http://127.0.0.1:11434/api/generate"
 
 payload = {
     "model": MODEL,
-    "prompt": "Reply with exactly: VulCheck Ollama integration works.",
+    "prompt": "Reply with exactly: Vulneraptor Ollama integration works.",
     "stream": False,
     "think": False,
 }

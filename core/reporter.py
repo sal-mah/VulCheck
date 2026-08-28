@@ -219,7 +219,7 @@ def print_xss_detail(result: dict[str, Any]) -> None:
     print(SEPARATOR)
     print(f"Status: {result.get('status', 'unknown')}")
     print(f"Target: {result.get('target', '')}")
-    print(f"Marker: {result.get('marker', 'VulnScopeXSS')}")
+    print(f"Marker: {result.get('marker', 'VulneraptorXSS')}")
     if result.get("max_pages") is not None:
         print(f"Max Pages: {result['max_pages']}")
 
@@ -460,7 +460,7 @@ def print_ai_detail(report: dict[str, Any]) -> None:
  
 def print_integrated_report(report: dict[str, Any]) -> None:
     print("\n" + SEPARATOR)
-    print("VULNSCOPE LITE - FULL INTEGRATED SCAN OUTPUT")
+    print("Vulneraptor LITE - FULL INTEGRATED SCAN OUTPUT")
     print(SEPARATOR)
     print(f"Target: {report['target']}")
     print("Execution Order: Recon -> XSS -> SQL Injection -> Security Config -> Ollama AI")
